@@ -4,7 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 
 class LoginController extends Controller
 {
@@ -36,5 +40,30 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function showLoginForm()
+    {
+        return view('auth.login1');
+    }
+
+    /**
+     * @param Request $request
+     * @param $user
+     * @return Application|RedirectResponse|Redirector
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        if (isAdmin()) {
+            return redirect('admin/dashboard');
+        }
+
+        if (isDriver()) {
+            return redirect('driver/dashboard');
+        }
+
+        if (isUser()) {
+            return redirect('user/dashboard');
+        }
     }
 }
