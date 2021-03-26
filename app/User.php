@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\DustRequest;
+use App\Models\UserProfile;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -17,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role'
     ];
 
     /**
@@ -75,5 +77,16 @@ class User extends Authenticatable
         } else {
             return false;
         }
+    }
+
+    public function user_profile()
+    {
+        return $this->hasOne(UserProfile::class)->withDefault();
+    }
+
+    public function dust_request()
+    {
+
+        return $this->hasMany(DustRequest::class);
     }
 }

@@ -15,11 +15,13 @@ class Admin
         }
         if (!Auth::check())
         {
+            //abort(403, 'Unauthorized action.');
             return redirect('login');
         }
         /*session()->flash('message', 'You Do Not Have Permission To View This.');
         Session::flash('type', 'error');
         Session::flash('title', 'Permission Not Granted');*/
+
         return redirect()->route('denied');
     }
 }

@@ -16,7 +16,7 @@
                      alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">Admin Dashboard</a>
             </div>
         </div>
 
@@ -52,110 +52,46 @@
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-plus-square"></i>
-                        <p>
-                            Extras
+                        <i class="nav-icon far fa-user"></i>
+                        <p> Driver
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>
-                                    Login & Register v1
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="pages/examples/login.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Login v1</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/register.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Register v1</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/forgot-password.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Forgot Password v1</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/recover-password.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Recover Password v1</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>
-                                    Login & Register v2
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="pages/examples/login-v2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Login v2</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/register-v2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Register v2</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/forgot-password-v2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Forgot Password v2</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/recover-password-v2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Recover Password v2</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/lockscreen.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Lockscreen</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/legacy-user-menu.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Legacy User Menu</p>
-                            </a>
-                        </li>
 
                         <li class="nav-item">
-                            <a href="pages/examples/blank.html" class="nav-link">
+                            <a href="{{ route('admin.driver.create') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Blank Page</p>
+                                <p>Add Driver</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="starter.html" class="nav-link">
+                            <a href="{{ route('admin.driver.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Starter Page</p>
+                                <p>List User</p>
                             </a>
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p> Dust Request
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        <li class="nav-item">
+                            <a href="{{ url('admin/dust-request') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>See Dust Request</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

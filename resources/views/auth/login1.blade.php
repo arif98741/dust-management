@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,8 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="#">Login Panel</a>
+        <a href="#">
+            Login Panel</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
@@ -28,11 +28,7 @@
                 <div class="input-group mb-3">
                     <input id="email" type="email" class="form-control" name="email"
                            value="{{ old('email') }}" required autofocus>
-                    @if ($errors->has('email'))
-                        <span class="help-block">
-                                            <strong>{{ $errors->first('email') }}</strong>
-                                        </span>
-                    @endif
+
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -41,7 +37,11 @@
                 </div>
                 <div class="input-group mb-3">
                     <input id="password" type="password" class="form-control" name="password" required>
-
+                    @if ($errors->has('password'))
+                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                    @endif
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
@@ -64,13 +64,16 @@
                     <!-- /.col -->
                 </div>
             </form>
+            @if ($errors->has('email'))
+                <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+            @endif
 
             <p class="mb-1">
                 <a href="forgot-password.html">I forgot my password</a>
             </p>
-            <p class="mb-0">
-                <a href="register.html" class="text-center">Register a new membership</a>
-            </p>
+
         </div>
         <!-- /.login-card-body -->
     </div>
