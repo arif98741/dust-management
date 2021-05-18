@@ -4,8 +4,12 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\DustRequest;
+use App\Models\Payment;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class UserController extends Controller
 {
@@ -18,7 +22,7 @@ class UserController extends Controller
     {
         $data = [
             'requests' => DustRequest::with(['user', 'driver'])
-               ->where('user_id', Auth::user()->id)
+                ->where('user_id', Auth::user()->id)
                 ->orderBy('id', 'desc')
                 ->get()
         ];
@@ -49,8 +53,39 @@ class UserController extends Controller
         DustRequest::create($data);
         $request->session()->flash('alert-success', 'Your request was sent successfully');
         return redirect('user/my-request');
+    }
 
+    /**
+     * @param Request $request
+     * @return Application|Factory|View
+     */
+    public function AddPayment(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $data = $request->all();
+            $data['user_id'] = Auth::user()->id;
 
+            Payment::create($data);
+            $request->session()->flash('alert-success', 'Payment submitted successfully');
+            return redirect('user/payment-list');
+        }
+
+        $data = [
+        ];
+
+        return view('backend.user.add-payment')->with($data);
+    }
+
+    public function PaymentList()
+    {
+        $data = [
+            'requests' => Payment::with(['user'])
+                ->where('user_id', Auth::user()->id)
+                ->orderBy('id', 'desc')
+                ->get()
+        ];
+
+        return view('backend.user.payment-list')->with($data);
     }
 
 

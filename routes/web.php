@@ -8,11 +8,10 @@ Route::get('/', 'HomeController@index');
 Route::get('/user-register', 'HomeController@userRegister');
 Route::post('/user-register', 'HomeController@saveUser');
 Route::get('/see-dust-request', 'HomeController@seeDustRequest');
-Route::get('do/logout', function (){
+Route::get('do/logout', function () {
     Auth::logout();
     return redirect('/');
 });
-
 
 
 /**
@@ -28,6 +27,9 @@ Route::namespace('Admin')
         Route::resource('driver', 'DriverController');
         Route::resource('driver', 'DriverController');
         Route::get('dust-request', 'DustController@Dustrequest');
+        Route::get('/payment-list', 'DustController@PaymentList');
+        Route::get('/change-payment-status/{status}', 'DustController@changePaymentStatus');
+
 
     });
 
@@ -53,6 +55,8 @@ Route::group(['middleware' => 'user', 'prefix' => 'user'], function () {
     Route::get('my-request', 'User\UserController@myRequest');
     Route::get('add-new-request', 'User\UserController@addNewRequest');
     Route::post('add-new-request', 'User\UserController@saveNewRequest');
+    Route::match(['get', 'post'], '/add-payment', 'User\UserController@AddPayment');
+    Route::get('/payment-list', 'User\UserController@PaymentList');
 
 });
 
