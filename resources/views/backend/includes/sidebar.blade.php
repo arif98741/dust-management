@@ -76,7 +76,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-list"></i>
-                        <p> Dust Request
+                        <p> Waste Request
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -85,7 +85,7 @@
                         <li class="nav-item">
                             <a href="{{ url('admin/dust-request') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>See Dust Request</p>
+                                <p>See Waste Request</p>
                             </a>
                         </li>
 

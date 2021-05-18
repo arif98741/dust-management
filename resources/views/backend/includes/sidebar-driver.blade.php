@@ -38,7 +38,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-list"></i>
-                        <p> Dust Request LIst
+                        <p> Waste Request LIst
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>

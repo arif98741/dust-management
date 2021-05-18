@@ -29,12 +29,12 @@
 
                             <div class="col-lg-6 form-group">
                                 <div class="form-group">
-                                    <label for="name">Dust Type</label>
+                                    <label for="name">Waste Type</label>
                                     <select name="dust_type" class="form-control" id="">
-                                        <option value="">Select Dust Type</option>
-                                        <option value="Home Dust">Home Dust</option>
+                                        <option value="">Select Waste Type</option>
+                                        <option value="Home Dust">Home Waste</option>
                                         <option value="Industrial Garbage">Industrial Garbage</option>
-                                        <option value="Farming Dust">Farming Dust</option>
+                                        <option value="Farming Dust">Farming Waste</option>
                                         <option value="Cattle Garbage">Cattle Garbage</option>
                                         <option value="Others">Others</option>
                                     </select>

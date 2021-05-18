@@ -23,7 +23,7 @@
                 <table class="table table-bordered">
                     <tr>
                         <th style="width: 15%">SL</th>
-                        <th style="width: 15%">Dusty Type</th>
+                        <th style="width: 15%">Waste Type</th>
                         <th style="width: 15%">Amount</th>
                         <th style="width: 15%">Collection Address</th>
                         <th style="width: 15%">Request Date</th>

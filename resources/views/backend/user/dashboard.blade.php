@@ -28,7 +28,7 @@
                             <div class="inner">
                                 <h3>150</h3>
 
-                                <p>Total Collected Dust</p>
+                                <p>Total Collected Waste</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-bag"></i>

@@ -50,7 +50,7 @@
                 <div class="row align-items-center justify-content-between text-left">
 
                     <div class="site-logo pos-absolute">
-                        <a href="index.html" class="unslate_co--site-logo">Dust Management<span>.</span></a>
+                        <a href="index.html" class="unslate_co--site-logo">Waste Management System<span>.</span></a>
                     </div>
                     <div class="col-md-5 text-right text-lg-left">
                         @include('includes.public-nav')
@@ -93,7 +93,7 @@
         <div class="unslate_co--section" id="contact-section">
             <div class="container">
                 <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
-                    <h2 class="heading-h2 text-center divider">Recent Dust Requests</h2>
+                    <h2 class="heading-h2 text-center divider">Recent Waste Requests</h2>
                 </div>
 
 
@@ -103,7 +103,7 @@
                         <table class="table table-bordered">
                             <tr>
                                 <th style="width: 20%">SL</th>
-                                <th style="width: 20%">Dusty Type</th>
+                                <th style="width: 20%">Waste Type</th>
                                 <th style="width: 20%">Amount</th>
                                 <th style="width: 20%">Collection Address</th>
                                 <th style="width: 20%">Request Date</th>

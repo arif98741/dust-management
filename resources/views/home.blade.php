@@ -50,7 +50,7 @@
                 <div class="row align-items-center justify-content-between text-left">
 
                     <div class="site-logo pos-absolute">
-                        <a href="index.html" class="unslate_co--site-logo">Dust Management<span>.</span></a>
+                        <a href="index.html" class="unslate_co--site-logo">Waste Management<span>.</span></a>
                     </div>
                     <div class="col-md-5 text-right text-lg-left">
 
@@ -93,7 +93,7 @@
         <div class="unslate_co--section section-counter" id="stats-section">
             <div class="container">
                 <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
-                    <h2 class="heading-h2 text-center divider">Stats</h2>
+                    <h2 class="heading-h2 text-center divider">Statistics</h2>
 
                 </div>
 
