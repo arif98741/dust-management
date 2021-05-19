@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style1.css')}}">
 
 </head>
-<body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+<body data-spy="scroll" data-target=".site-nav-target" data-offset="200" style="background-image: url({{ asset('assets/frontend/images/background'.rand(1,6).'.jpg') }})">
 
 <nav class="unslate_co--site-mobile-menu">
     <div class="close-wrap d-flex">
@@ -50,7 +50,7 @@
                 <div class="row align-items-center justify-content-between text-left">
 
                     <div class="site-logo pos-absolute">
-                        <a href="index.html" class="unslate_co--site-logo">Waste Management<span>.</span></a>
+                        <a href="index.html" class="unslate_co--site-logo">Waste Management System<span>.</span></a>
                     </div>
                     <div class="col-md-5 text-right text-lg-left">
 
@@ -63,42 +63,14 @@
         </nav>
 
 
-        <!--<div class="unslate_co&#45;&#45;section" id="about-section">
-          <div class="container">
-
-
-
-            <div class="row mt-5 justify-content-between align-items-center">
-              <div class="col-lg-7 mb-5 mb-lg-0" data-aos="fade-up">
-                <figure class="dotted-bg">
-                  <img src="images/profile.jpg" alt="Image" class="img-fluid">
-                </figure>
-              </div>
-              <div class="col-lg-5 pl-lg-5" data-aos="fade-up"  data-aos-delay="100">
-                <h3 class="mb-4 heading-h3">About John Smith</h3>
-                <p >Far far away, behind the word mountains, far from the countries <a href="#">Vokalia and Consonantia</a>, there live the blind texts. </p>
-                <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-
-                <ul class="list-unstyled list-check d-block">
-                  <li class="d-block">Far far away, behind the word mountains</li>
-                  <li class="d-block">The countries Vokalia</li>
-                  <li class="d-block">Duden flows by their place</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>-->
-
-
         <div class="unslate_co--section section-counter" id="stats-section">
             <div class="container">
-                <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
+                <div class="section-heading-wrap text-center mt-5" data-aos="fade-up">
                     <h2 class="heading-h2 text-center divider">Statistics</h2>
 
                 </div>
 
-
-                <div class="row pt-5">
+                <div class="row ">
                     <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
                         <div class="counter-v1 text-center">
                 <span class="number-wrap">
@@ -133,21 +105,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- END .counter -->
-
-
-        <!-- END testimonial -->
-
-
-        <div class="unslate_co--section" id="contact-section">
-            <div class="container">
-                <div class="section-heading-wrap text-center mb-5" data-aos="fade-up">
-                    <h2 class="heading-h2 text-center divider">Contact Us</h2>
-                </div>
-
-
-                <div class="row justify-content-between">
+            <div class="container mt-5">
+                <div class="row justify-content-between content-block">
 
                     <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <form method="post" class="form-outline-style-v1" id="contactForm">
@@ -204,6 +163,9 @@
                 </div>
             </div>
         </div>
+
+
+
     </div> <!-- END .unslate_co-site-inner -->
 
     <footer class="unslate_co--footer unslate_co--section">
@@ -218,13 +180,6 @@
     </footer>
 
 
-</div>
-
-
-<!-- Loader -->
-<div id="unslate_co--overlayer"></div>
-<div class="site-loader-wrap">
-    <div class="site-loader"></div>
 </div>
 
 <script src="{{ asset('assets/frontend/js/scripts-dist.js')}}"></script>
